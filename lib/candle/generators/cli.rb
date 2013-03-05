@@ -40,7 +40,7 @@ module Candle
           args = ARGV.empty? && generator_class.require_arguments? ? ["-h"] : ARGV  
           generator_class.start(args)            
         else                 
-          puts colorize( "222Candle Version: #{Candle::Version::STRING}", { :foreground => :red, :background => :white, :config => :underline } )
+          puts colorize( "Candle Version: #{Candle::Version::STRING}", { :foreground => :red, :background => :white, :config => :underline } )
           puts     
         end
       end
