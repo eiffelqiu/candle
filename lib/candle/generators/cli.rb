@@ -41,7 +41,13 @@ module Candle
           generator_class.start(args)            
         else                 
           puts colorize( "Candle Version: #{Candle::Version::STRING}", { :foreground => :red, :background => :white, :config => :underline } )
-          puts     
+          puts          
+          puts "Candle is a rubygem for wax iOS framework which writes iOS application in lua, it contains xcode 4 template generators."
+          puts          
+          puts colorize("For more information")
+          puts
+          puts "puer help"
+          puts
         end
       end
     end # Cli
