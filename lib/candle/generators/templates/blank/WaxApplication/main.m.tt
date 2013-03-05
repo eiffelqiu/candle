@@ -1,0 +1,20 @@
+//
+//  main.m
+//  <%= @project_name %>
+//
+//  Created by <%= @developer.capitalize %> on <%= @created_on %>
+//  Copyright(c) <%= Time.now.year %>, All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "wax.h"
+#import "wax_http.h"
+#import "wax_json.h"
+#import "wax_filesystem.h"
+int main(int argc, char *argv[]) {
+    NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+    wax_start("AppDelegate.lua", luaopen_wax_http, luaopen_wax_json, luaopen_wax_filesystem, nil);
+    int retVal = UIApplicationMain(argc, argv, nil, @"AppDelegate");
+    [pool release];
+    return retVal;
+}

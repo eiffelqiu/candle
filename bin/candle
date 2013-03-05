@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+# -*- coding: utf-8 -*-
+
+require 'rubygems'
+require 'rubygems' unless defined?(Gem) 
+require 'thread'
+
+class Object
+  alias sh system
+end
+
+lib_dir = File.expand_path(File.join(File.dirname(__FILE__),'..','lib'))
+unless $LOAD_PATH.include?(lib_dir)
+  $LOAD_PATH << lib_dir
+end
+
+require 'candle'
+
+require File.expand_path(File.dirname(__FILE__) + '/../lib/candle/generators/cli')
+
+Candle::Generators::Cli.start(ARGV)  
