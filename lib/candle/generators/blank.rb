@@ -46,7 +46,7 @@ module Candle
     
       =================================================================
       Your #{@project_name} wax application has been generated.
-      Open #{@project_name.capitalize}.xcodeproj
+      Open #{@project_name}.xcodeproj
       Build and Run
       =================================================================
     
