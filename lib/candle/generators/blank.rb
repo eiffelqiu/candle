@@ -116,11 +116,12 @@ template "templates/blank/WaxApplication/main.m.tt", "#{@project_name}/#{@projec
 template "templates/blank/WaxApplication/ProtocolLoader.h", "#{@project_name}/#{@project_name}/ProtocolLoader.h"
 
 directory "templates/blank/WaxApplication/en.lproj", "#{@project_name}/#{@project_name}/en.lproj"
-template "templates/blank/WaxApplication/Default.png", "#{@project_name}/#{@project_name}/Default.png"
-template "templates/blank/WaxApplication/Default@2x.png", "#{@project_name}/#{@project_name}/Default@2x.png"
-template "templates/blank/WaxApplication/Default-568h@2x.png", "#{@project_name}/#{@project_name}/Default-568h@2x.png"
 
 template "templates/blank/WaxApplication/WaxApplication-Info.plist.tt", "#{@project_name}/#{@project_name}/#{@project_name}-Info.plist"
 template "templates/blank/WaxApplication/WaxApplication-Prefix.pch.tt", "#{@project_name}/#{@project_name}/#{@project_name}-Prefix.pch"
+
+copy_file "templates/resources/Default-568h@2x.png", "#{@project_name}/#{@project_name}/Default-568h@2x.png"
+copy_file "templates/resources/Default@2x.png", "#{@project_name}/#{@project_name}/Default@2x.png"
+copy_file "templates/resources/Default.png", "#{@project_name}/#{@project_name}/Default.png"
 
 system "chmod 777 #{@project_name}/wax/lib/build-scripts/*"
