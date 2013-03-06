@@ -30,8 +30,14 @@ Usage 1: candle help
 Usage 2: generate wax iOS blank xcode application project
 -------
 	$ candle blank demo
+	$ cd demo
+	$ open demo.xcodeproj	
 
 ![candle usage](http://eiffelqiu.github.com/candle/images/candle2.png)
+
+![candle usage](http://eiffelqiu.github.com/candle/images/candle3.png)
+
+Xcode build and run
 
 Contributing to candle
 =======
