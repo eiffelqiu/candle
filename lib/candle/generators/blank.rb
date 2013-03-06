@@ -71,21 +71,21 @@ aFile.close
 aString.gsub!('WaxApplication', "#{@project_name}")
 File.open(fileName, "w") { |file| file << aString }
 
-fileName = "#{options[:root]}/#{@project_name}/#{@project_name}.xcodeproj/xcuserdata/#{`whoami`.strip}.xcuserdatad/xcschemes/WaxApplication.xcscheme"
+fileName = "#{options[:root]}/#{@project_name}/#{@project_name}.xcodeproj/xcuserdata/eiffel.xcuserdatad/xcschemes/WaxApplication.xcscheme"
 aFile = File.open(fileName, "r")
 aString = aFile.read
 aFile.close
 aString.gsub!('WaxApplication', "#{@project_name}")
 File.open(fileName, "w") { |file| file << aString }
 
-fileName = "#{options[:root]}/#{@project_name}/#{@project_name}.xcodeproj/xcuserdata/#{`whoami`.strip}.xcuserdatad/xcschemes/xcschememanagement.plist"
+fileName = "#{options[:root]}/#{@project_name}/#{@project_name}.xcodeproj/xcuserdata/eiffel.xcuserdatad/xcschemes/xcschememanagement.plist"
 aFile = File.open(fileName, "r")
 aString = aFile.read
 aFile.close
 aString.gsub!('WaxApplication', "#{@project_name}")
 File.open(fileName, "w") { |file| file << aString }
 
-fileName = "#{options[:root]}/#{@project_name}/#{@project_name}.xcodeproj/xcuserdata/#{`whoami`.strip}.xcuserdatad/xcschemes/WaxApplication.xcscheme"
+fileName = "#{options[:root]}/#{@project_name}/#{@project_name}.xcodeproj/xcuserdata/eiffel.xcuserdatad/xcschemes/WaxApplication.xcscheme"
 aFile = File.open(fileName, "r")
 aString = aFile.read
 aFile.close
@@ -99,19 +99,18 @@ aFile.close
 aString.gsub!('WaxApplication', "#{@project_name}")
 File.open(fileName, "w") { |file| file << aString }
 
-
-
-system "mv  #{options[:root]}/#{@project_name}/#{@project_name}.xcodeproj/project.xcworkspace/xcuserdata/eiffel.xcuserdatad        #{options[:root]}/#{@project_name}/#{@project_name}.xcodeproj/project.xcworkspace/xcuserdata/#{`whoami`.strip}.xcuserdatad" unless #{`whoami`.strip} != 'eiffel'
-
-
-system "mv #{options[:root]}/#{@project_name}/#{@project_name}.xcodeproj/xcuserdata/eiffel.xcuserdatad        #{options[:root]}/#{@project_name}/#{@project_name}.xcodeproj/xcuserdata/#{`whoami`.strip}.xcuserdatad" unless #{`whoami`.strip} != 'eiffel'
-
-fileName = "#{options[:root]}/#{@project_name}/#{@project_name}.xcodeproj/project.xcworkspace/xcuserdata/#{`whoami`.strip}.xcuserdatad/UserInterfaceState.xcuserstate"
+fileName = "#{options[:root]}/#{@project_name}/#{@project_name}.xcodeproj/project.xcworkspace/xcuserdata/eiffel.xcuserdatad/UserInterfaceState.xcuserstate"
 aFile = File.open(fileName, "r")
 aString = aFile.read.unpack("C*").pack("U*")
 aFile.close
 aString.gsub!('WaxApplication', "#{@project_name}")
 File.open(fileName, "w") { |file| file << aString }
+
+system "mv #{options[:root]}/#{@project_name}/#{@project_name}.xcodeproj/project.xcworkspace/xcuserdata/eiffel.xcuserdatad #{options[:root]}/#{@project_name}/#{@project_name}.xcodeproj/project.xcworkspace/xcuserdata/#{`whoami`.strip}.xcuserdatad" unless #{`whoami`.strip} != 'eiffel'
+
+system "mv #{options[:root]}/#{@project_name}/#{@project_name}.xcodeproj/xcuserdata/eiffel.xcuserdatad #{options[:root]}/#{@project_name}/#{@project_name}.xcodeproj/xcuserdata/#{`whoami`.strip}.xcuserdatad" unless #{`whoami`.strip} != 'eiffel'
+
+system "mv #{options[:root]}/#{@project_name}/#{@project_name}.xcodeproj/project.xcworkspace/xcuserdata/eiffel.xcuserdatad/UserInterfaceState.xcuserstate #{options[:root]}/#{@project_name}/#{@project_name}.xcodeproj/project.xcworkspace/xcuserdata/#{`whoami`.strip}.xcuserdatad/UserInterfaceState.xcuserstate"  unless #{`whoami`.strip} != 'eiffel'
 
 template "templates/blank/WaxApplication/main.m.tt", "#{@project_name}/#{@project_name}/main.m"
 template "templates/blank/WaxApplication/ProtocolLoader.h", "#{@project_name}/#{@project_name}/ProtocolLoader.h"
