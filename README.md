@@ -21,17 +21,17 @@ Installation
 
 Usage
 =======
-![candle usage](http://eiffelqiu.github.com/candle/images/candle1.png)
-
 Usage 1: candle help
 -------
 	$ candle help
 
-![candle usage](http://eiffelqiu.github.com/candle/images/candle2.png)
+![candle usage](http://eiffelqiu.github.com/candle/images/candle1.png)
 
 Usage 2: generate wax iOS blank xcode application project
 -------
 	$ candle blank demo
+
+![candle usage](http://eiffelqiu.github.com/candle/images/candle2.png)
 
 Contributing to candle
 =======
