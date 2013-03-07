@@ -62,7 +62,7 @@ end # Candle
 ##
 # We add our generators to Candle::Genererator
 #
-Candle::Generators.load_paths << Dir[File.dirname(__FILE__) + '/candle/generators/{blank,help,xib}.rb']
+Candle::Generators.load_paths << Dir[File.dirname(__FILE__) + '/candle/generators/{blank,help,xib,table}.rb']
 
 
 
