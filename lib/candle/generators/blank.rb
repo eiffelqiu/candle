@@ -110,7 +110,7 @@ system "mv #{options[:root]}/#{@project_name}/#{@project_name}.xcodeproj/project
 
 system "mv #{options[:root]}/#{@project_name}/#{@project_name}.xcodeproj/xcuserdata/eiffel.xcuserdatad #{options[:root]}/#{@project_name}/#{@project_name}.xcodeproj/xcuserdata/#{`whoami`.strip}.xcuserdatad" if `whoami`.strip != 'eiffel'
 
-system "mv #{options[:root]}/#{@project_name}/#{@project_name}.xcodeproj/xcuserdata/#{`whoami`.strip}.xcuserdatad/xcschemes/WaxApplication.xcscheme #{options[:root]}/#{@project_name}/#{@project_name}.xcodeproj/xcuserdata/#{`whoami`.strip}.xcuserdatad/xcschemes/#{@project_name}.xcscheme" if `whoami`.strip != 'eiffel'
+system "mv #{options[:root]}/#{@project_name}/#{@project_name}.xcodeproj/xcuserdata/#{`whoami`.strip}.xcuserdatad/xcschemes/WaxApplication.xcscheme #{options[:root]}/#{@project_name}/#{@project_name}.xcodeproj/xcuserdata/#{`whoami`.strip}.xcuserdatad/xcschemes/#{@project_name}.xcscheme" 
 
 template "templates/blank/WaxApplication/main.m.tt", "#{@project_name}/#{@project_name}/main.m"
 template "templates/blank/WaxApplication/ProtocolLoader.h", "#{@project_name}/#{@project_name}/ProtocolLoader.h"
