@@ -1,49 +1,123 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Candle : Candle is a rubygem for wax iOS framework for writing lua iOS application, it contains xcode 4 template generators " />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Candle by eiffelqiu</title>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <title>Candle</title>
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
-
   <body>
+    <div class="wrapper">
+      <header>
+        <h1>Candle</h1>
+        <p>Candle is a rubygem for wax iOS framework for writing lua iOS application, it contains xcode 4 template generators </p>
+        <p class="view"><a href="https://github.com/eiffelqiu/candle">View the Project on GitHub <small>eiffelqiu/candle</small></a></p>
+        <ul>
+          <li><a href="https://github.com/eiffelqiu/candle/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/eiffelqiu/candle/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/eiffelqiu/candle">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>candle</h1>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/eiffelqiu/candle">View on GitHub</a>
+<p>Candle is a rubygem for wax iOS framework which writes iOS application in lua. </p>
 
-          <h1 id="project_title">Candle</h1>
-          <h2 id="project_tagline">Candle is a rubygem for wax iOS framework for writing lua iOS application, it contains xcode 4 template generators </h2>
+<h1>Prerequisites</h1>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/eiffelqiu/candle/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/eiffelqiu/candle/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+<h2>Ruby</h2>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
- 
+<p>Candle require ruby installed on your mac machine. Since now all Mac OSX system preinstalled ruby enviroment, that's not a big issue. </p>
+
+<h2>Rubygem(latest)</h2>
+
+<p>Candle has an dependency on "thor" gem , which require latest rubygem installed, so you need to update your rubygem to latest version, run command below to update your rubygem to the latest one.</p>
+
+<pre><code>$ sudo gem update --system  # double dash option
+</code></pre>
+
+<h1>Installation</h1>
+
+<pre><code>$ sudo gem install candle
+</code></pre>
+
+<h1>Usage</h1>
+
+<h2>Usage 1: candle help</h2>
+
+<pre><code>$ candle help
+</code></pre>
+
+<p><img src="http://eiffelqiu.github.com/candle/images/candle1.png" alt="candle usage"></p>
+
+<h2>Usage 2: generate a blank wax iOS project</h2>
+
+<pre><code>$ candle blank demo
+$ cd demo
+$ open demo.xcodeproj   
+</code></pre>
+
+<p><img src="http://eiffelqiu.github.com/candle/images/candle2.png" alt="candle usage"></p>
+
+<p><img src="http://eiffelqiu.github.com/candle/images/candle3.png" alt="candle usage"></p>
+
+<p>Xcode build and run</p>
+
+<h2>Usage 3: generate a wax iOS project using xib and core animation</h2>
+
+<pre><code>$ candle xib demo
+$ cd demo
+$ open demo.xcodeproj   
+</code></pre>
+
+<p><img src="http://eiffelqiu.github.com/candle/images/candle4.png" alt="candle usage"></p>
+
+<p><img src="http://eiffelqiu.github.com/candle/images/candle5.png" alt="candle usage"></p>
+
+<p>Xcode build and run</p>
+
+<h2>Usage 4: generate a wax blank iOS project using tableview</h2>
+
+<pre><code>$ candle table demo
+$ cd demo
+$ open demo.xcodeproj   
+</code></pre>
+
+<p><img src="http://eiffelqiu.github.com/candle/images/candle6.png" alt="candle usage"></p>
+
+<p><img src="http://eiffelqiu.github.com/candle/images/candle7.png" alt="candle usage"></p>
+
+<p>Xcode build and run</p>
+
+<h1>Contributing to candle</h1>
+
+<ul>
+<li>Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet</li>
+<li>Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it</li>
+<li>Fork the project</li>
+<li>Start a feature/bugfix branch</li>
+<li>Commit and push until you are happy with your contribution</li>
+<li>Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.</li>
+<li>Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.</li>
+</ul><h1>Copyright</h1>
+
+<p>Copyright (c) 2011 Eiffel Q. See LICENSE.txt for
+further details.</p>
       </section>
     </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Candle maintained by <a href="https://github.com/eiffelqiu">eiffelqiu</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
+    <footer>
+      <p>Project maintained by <a href="https://github.com/eiffelqiu">eiffelqiu</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     
-
   </body>
 </html>
