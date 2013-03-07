@@ -7,7 +7,7 @@ require File.dirname(__FILE__) + '/../view'
 
 module Candle
   module Generators
-    class Blank < Jam
+    class Xib < Jam
       include CLIColorize
       
       CLIColorize.default_color = :red
@@ -17,7 +17,7 @@ module Candle
       version Candle::Version::STRING  
 
       # Add this generator to our candle
-      Candle::Generators.add_generator(:blank, self)
+      Candle::Generators.add_generator(:xib, self)
   
       init_generator
 
@@ -59,10 +59,10 @@ end # Candle
 __END__
 empty_directory "#{@project_name}"
 
-directory "templates/blank/scripts", "#{@project_name}/scripts"
+directory "templates/xib/scripts", "#{@project_name}/scripts"
 directory "lua/wax", "#{@project_name}/wax"
 
-directory "templates/blank/WaxApplication.xcodeproj", "#{@project_name}/#{@project_name}.xcodeproj"
+directory "templates/xib/WaxApplication.xcodeproj", "#{@project_name}/#{@project_name}.xcodeproj"
 
 fileName = "#{options[:root]}/#{@project_name}/#{@project_name}.xcodeproj/project.pbxproj"
 aFile = File.open(fileName, "r")
@@ -112,13 +112,13 @@ system "mv #{options[:root]}/#{@project_name}/#{@project_name}.xcodeproj/xcuserd
 
 system "mv #{options[:root]}/#{@project_name}/#{@project_name}.xcodeproj/xcuserdata/#{`whoami`.strip}.xcuserdatad/xcschemes/WaxApplication.xcscheme #{options[:root]}/#{@project_name}/#{@project_name}.xcodeproj/xcuserdata/#{`whoami`.strip}.xcuserdatad/xcschemes/#{@project_name}.xcscheme" if `whoami`.strip != 'eiffel'
 
-template "templates/blank/WaxApplication/main.m.tt", "#{@project_name}/#{@project_name}/main.m"
-template "templates/blank/WaxApplication/ProtocolLoader.h", "#{@project_name}/#{@project_name}/ProtocolLoader.h"
+template "templates/xib/WaxApplication/main.m.tt", "#{@project_name}/#{@project_name}/main.m"
+template "templates/xib/WaxApplication/ProtocolLoader.h", "#{@project_name}/#{@project_name}/ProtocolLoader.h"
 
-directory "templates/blank/WaxApplication/en.lproj", "#{@project_name}/#{@project_name}/en.lproj"
+directory "templates/xib/WaxApplication/en.lproj", "#{@project_name}/#{@project_name}/en.lproj"
 
-template "templates/blank/WaxApplication/WaxApplication-Info.plist.tt", "#{@project_name}/#{@project_name}/#{@project_name}-Info.plist"
-template "templates/blank/WaxApplication/WaxApplication-Prefix.pch.tt", "#{@project_name}/#{@project_name}/#{@project_name}-Prefix.pch"
+template "templates/xib/WaxApplication/WaxApplication-Info.plist.tt", "#{@project_name}/#{@project_name}/#{@project_name}-Info.plist"
+template "templates/xib/WaxApplication/WaxApplication-Prefix.pch.tt", "#{@project_name}/#{@project_name}/#{@project_name}-Prefix.pch"
 
 copy_file "templates/resources/Default-568h@2x.png", "#{@project_name}/#{@project_name}/Default-568h@2x.png"
 copy_file "templates/resources/Default@2x.png", "#{@project_name}/#{@project_name}/Default@2x.png"
