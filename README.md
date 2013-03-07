@@ -39,6 +39,18 @@ Usage 2: generate wax iOS blank xcode application project
 
 Xcode build and run
 
+Usage 3: generate wax iOS xcode application project which uses Xib
+-------
+	$ candle xib demo
+	$ cd demo
+	$ open demo.xcodeproj	
+
+![candle usage](http://eiffelqiu.github.com/candle/images/candle4.png)
+
+![candle usage](http://eiffelqiu.github.com/candle/images/candle5.png)
+
+Xcode build and run
+
 Contributing to candle
 =======
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
