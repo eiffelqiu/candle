@@ -35,7 +35,9 @@ module Candle
         puts "Candle is a wax iOS code generators tool."
         puts                    
         puts colorize("Generator Options")
-        opt = [{ :category => "generators", :command => "candle blank todo", :description => "generate a wax blank iOS project"}
+        opt = [{ :category => "generators", :command => "candle blank demo", :description => "generate a blank wax iOS project"},
+          { :category => "generators", :command => "candle xib demo", :description => "generate a wax iOS project using xib and core animation"},
+          { :category => "generators", :command => "candle table demo", :description => "generate a wax blank iOS project using tableview"}
                ] 
         View.render(opt, RENDER_OPTIONS)
         puts        

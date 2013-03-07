@@ -27,7 +27,7 @@ Usage 1: candle help
 
 ![candle usage](http://eiffelqiu.github.com/candle/images/candle1.png)
 
-Usage 2: generate wax iOS blank xcode application project
+Usage 2: generate a blank wax iOS project
 -------
 	$ candle blank demo
 	$ cd demo
@@ -39,7 +39,7 @@ Usage 2: generate wax iOS blank xcode application project
 
 Xcode build and run
 
-Usage 3: generate wax iOS xcode application project which uses Xib
+Usage 3: generate a wax iOS project using xib and core animation
 -------
 	$ candle xib demo
 	$ cd demo
@@ -48,6 +48,18 @@ Usage 3: generate wax iOS xcode application project which uses Xib
 ![candle usage](http://eiffelqiu.github.com/candle/images/candle4.png)
 
 ![candle usage](http://eiffelqiu.github.com/candle/images/candle5.png)
+
+Xcode build and run
+
+Usage 4: generate a wax blank iOS project using tableview
+-------
+	$ candle table demo
+	$ cd demo
+	$ open demo.xcodeproj	
+
+![candle usage](http://eiffelqiu.github.com/candle/images/candle6.png)
+
+![candle usage](http://eiffelqiu.github.com/candle/images/candle7.png)
 
 Xcode build and run
 
