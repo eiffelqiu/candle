@@ -123,5 +123,6 @@ template "templates/blank/WaxApplication/WaxApplication-Prefix.pch.tt", "#{@proj
 copy_file "templates/resources/Default-568h@2x.png", "#{@project_name}/#{@project_name}/Default-568h@2x.png"
 copy_file "templates/resources/Default@2x.png", "#{@project_name}/#{@project_name}/Default@2x.png"
 copy_file "templates/resources/Default.png", "#{@project_name}/#{@project_name}/Default.png"
+copy_file "templates/project.rake", "#{@project_name}/#{@project_name}/Rakefile"
 
 system "chmod 777 #{@project_name}/wax/lib/build-scripts/*"
