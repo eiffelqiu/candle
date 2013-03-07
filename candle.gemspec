@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "candle"
-  s.version = "0.0.3"
+  s.version = "0.0.6"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Eiffel Qiu"]
-  s.date = "2013-03-06"
+  s.date = "2013-03-07"
   s.description = "Wax iOS Starter Project Generate Tools build with Ruby"
   s.email = "eiffelqiu@gmail.com"
   s.executables = ["candle"]
@@ -28,9 +28,6 @@ Gem::Specification.new do |s|
     "lib/candle/generators/cli.rb",
     "lib/candle/generators/help.rb",
     "lib/candle/generators/jam.rb",
-    "lib/candle/generators/lua/scripts/AppDelegate.lua",
-    "lib/candle/generators/lua/scripts/tests/init.lua",
-    "lib/candle/generators/lua/scripts/tests/someTest.lua",
     "lib/candle/generators/lua/wax/ProtocolLoader.h",
     "lib/candle/generators/lua/wax/bin/hammer",
     "lib/candle/generators/lua/wax/bin/update-xibs",
@@ -163,19 +160,58 @@ Gem::Specification.new do |s|
     "lib/candle/generators/lua/wax/lib/wax_stdlib.h",
     "lib/candle/generators/lua/wax/lib/wax_struct.h",
     "lib/candle/generators/lua/wax/lib/wax_struct.m",
+    "lib/candle/generators/table.rb",
     "lib/candle/generators/templates/blank/WaxApplication.xcodeproj/project.pbxproj",
     "lib/candle/generators/templates/blank/WaxApplication.xcodeproj/project.xcworkspace/contents.xcworkspacedata",
     "lib/candle/generators/templates/blank/WaxApplication.xcodeproj/project.xcworkspace/xcuserdata/eiffel.xcuserdatad/UserInterfaceState.xcuserstate",
     "lib/candle/generators/templates/blank/WaxApplication.xcodeproj/xcuserdata/eiffel.xcuserdatad/xcschemes/WaxApplication.xcscheme",
     "lib/candle/generators/templates/blank/WaxApplication.xcodeproj/xcuserdata/eiffel.xcuserdatad/xcschemes/xcschememanagement.plist",
-    "lib/candle/generators/templates/blank/WaxApplication/Default-568h@2x.png",
-    "lib/candle/generators/templates/blank/WaxApplication/Default.png",
-    "lib/candle/generators/templates/blank/WaxApplication/Default@2x.png",
     "lib/candle/generators/templates/blank/WaxApplication/ProtocolLoader.h",
     "lib/candle/generators/templates/blank/WaxApplication/WaxApplication-Info.plist.tt",
     "lib/candle/generators/templates/blank/WaxApplication/WaxApplication-Prefix.pch.tt",
     "lib/candle/generators/templates/blank/WaxApplication/en.lproj/InfoPlist.strings",
     "lib/candle/generators/templates/blank/WaxApplication/main.m.tt",
+    "lib/candle/generators/templates/blank/scripts/AppDelegate.lua",
+    "lib/candle/generators/templates/blank/scripts/tests/init.lua",
+    "lib/candle/generators/templates/blank/scripts/tests/someTest.lua",
+    "lib/candle/generators/templates/project.rake",
+    "lib/candle/generators/templates/resources/Default-568h@2x.png",
+    "lib/candle/generators/templates/resources/Default.png",
+    "lib/candle/generators/templates/resources/Default@2x.png",
+    "lib/candle/generators/templates/table/WaxApplication.xcodeproj/project.pbxproj",
+    "lib/candle/generators/templates/table/WaxApplication.xcodeproj/project.xcworkspace/contents.xcworkspacedata",
+    "lib/candle/generators/templates/table/WaxApplication.xcodeproj/project.xcworkspace/xcuserdata/eiffel.xcuserdatad/UserInterfaceState.xcuserstate",
+    "lib/candle/generators/templates/table/WaxApplication.xcodeproj/xcuserdata/eiffel.xcuserdatad/xcschemes/WaxApplication.xcscheme",
+    "lib/candle/generators/templates/table/WaxApplication.xcodeproj/xcuserdata/eiffel.xcuserdatad/xcschemes/xcschememanagement.plist",
+    "lib/candle/generators/templates/table/WaxApplication/ProtocolLoader.h",
+    "lib/candle/generators/templates/table/WaxApplication/WaxApplication-Info.plist.tt",
+    "lib/candle/generators/templates/table/WaxApplication/WaxApplication-Prefix.pch.tt",
+    "lib/candle/generators/templates/table/WaxApplication/en.lproj/InfoPlist.strings",
+    "lib/candle/generators/templates/table/WaxApplication/main.m.tt",
+    "lib/candle/generators/templates/table/scripts/AppDelegate.lua",
+    "lib/candle/generators/templates/table/scripts/CapitalsTable.lua",
+    "lib/candle/generators/templates/table/scripts/StatesTable.lua",
+    "lib/candle/generators/templates/table/scripts/states.plist",
+    "lib/candle/generators/templates/table/scripts/tests/init.lua",
+    "lib/candle/generators/templates/table/scripts/tests/someTest.lua",
+    "lib/candle/generators/templates/xib/WaxApplication.xcodeproj/project.pbxproj",
+    "lib/candle/generators/templates/xib/WaxApplication.xcodeproj/project.xcworkspace/contents.xcworkspacedata",
+    "lib/candle/generators/templates/xib/WaxApplication.xcodeproj/project.xcworkspace/xcuserdata/eiffel.xcuserdatad/UserInterfaceState.xcuserstate",
+    "lib/candle/generators/templates/xib/WaxApplication.xcodeproj/xcuserdata/eiffel.xcuserdatad/xcschemes/WaxApplication.xcscheme",
+    "lib/candle/generators/templates/xib/WaxApplication.xcodeproj/xcuserdata/eiffel.xcuserdatad/xcschemes/xcschememanagement.plist",
+    "lib/candle/generators/templates/xib/WaxApplication/ProtocolLoader.h",
+    "lib/candle/generators/templates/xib/WaxApplication/WaxApplication-Info.plist.tt",
+    "lib/candle/generators/templates/xib/WaxApplication/WaxApplication-Prefix.pch.tt",
+    "lib/candle/generators/templates/xib/WaxApplication/en.lproj/InfoPlist.strings",
+    "lib/candle/generators/templates/xib/WaxApplication/main.m.tt",
+    "lib/candle/generators/templates/xib/scripts/AppDelegate.lua",
+    "lib/candle/generators/templates/xib/scripts/BlueViewController.lua",
+    "lib/candle/generators/templates/xib/scripts/BlueViewController.xib",
+    "lib/candle/generators/templates/xib/scripts/OrangeViewController.lua",
+    "lib/candle/generators/templates/xib/scripts/OrangeViewController.xib",
+    "lib/candle/generators/templates/xib/scripts/tests/init.lua",
+    "lib/candle/generators/templates/xib/scripts/tests/someTest.lua",
+    "lib/candle/generators/xib.rb",
     "lib/candle/tasks.rb",
     "lib/candle/utility.rb",
     "lib/candle/version.rb",
@@ -184,11 +220,11 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/eiffelqiu/candle"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.25"
+  s.rubygems_version = "2.0.2"
   s.summary = "Wax iOS Starter Project Generate Tools"
 
   if s.respond_to? :specification_version then
-    s.specification_version = 3
+    s.specification_version = 4
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<thor>, [">= 0"])
