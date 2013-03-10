@@ -1,6 +1,6 @@
 candle
 ======
-Candle is a rubygem for wax iOS framework which writes iOS application in lua. 
+Candle is a rubygem for ( ![wax iOS framework](https://github.com/probablycorey/wax) which writes iOS application in lua. 
 
 ![candle](http://eiffelqiu.github.com/candle/images/candle.png)
 
