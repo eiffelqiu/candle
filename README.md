@@ -70,9 +70,9 @@ Usage 5: generate a wax blank iOS project using MapKit framework
 	$ cd demo
 	$ open demo.xcodeproj	
 
-![candle usage](http://eiffelqiu.github.com/candle/images/candle6.png)
+![candle usage](http://eiffelqiu.github.com/candle/images/candle8.png)
 
-![candle usage](http://eiffelqiu.github.com/candle/images/candle7.png)
+![candle usage](http://eiffelqiu.github.com/candle/images/candle9.png)
 
 Xcode build and run
 
