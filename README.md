@@ -64,6 +64,18 @@ Usage 4: generate a wax blank iOS project using tableview
 
 Xcode build and run
 
+Usage 5: generate a wax blank iOS project using MapKit framework
+-------
+	$ candle map demo
+	$ cd demo
+	$ open demo.xcodeproj	
+
+![candle usage](http://eiffelqiu.github.com/candle/images/candle6.png)
+
+![candle usage](http://eiffelqiu.github.com/candle/images/candle7.png)
+
+Xcode build and run
+
 Contributing to candle
 =======
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet

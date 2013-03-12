@@ -37,7 +37,9 @@ module Candle
         puts colorize("Generator Options")
         opt = [{ :category => "generators", :command => "candle blank demo", :description => "generate a blank wax iOS project"},
           { :category => "generators", :command => "candle xib demo", :description => "generate a wax iOS project using xib and core animation"},
-          { :category => "generators", :command => "candle table demo", :description => "generate a wax blank iOS project using tableview"}
+          { :category => "generators", :command => "candle table demo", :description => "generate a wax blank iOS project using tableview"},
+          { :category => "generators", :command => "candle map demo", :description => "generate a wax iOS application using MapKit framework"}
+          
                ] 
         View.render(opt, RENDER_OPTIONS)
         puts        

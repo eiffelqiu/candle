@@ -7,7 +7,7 @@ require File.dirname(__FILE__) + '/../view'
 
 module Candle
   module Generators
-    class Xib < Jam
+    class Map < Jam
       include CLIColorize
       
       CLIColorize.default_color = :red
@@ -17,11 +17,11 @@ module Candle
       version Candle::Version::STRING  
 
       # Add this generator to our candle
-      Candle::Generators.add_generator(:xib, self)
+      Candle::Generators.add_generator(:map, self)
   
       init_generator
 
-      desc "Description:\n\n\tcandle will generate a wax iOS project using xib and core animation"
+      desc "Description:\n\n\tcandle will generates an new wax iOS application using MapKit framework"
 
       argument :name, :desc => "The name of your wax application"
 
@@ -59,10 +59,10 @@ end # Candle
 __END__
 empty_directory "#{@project_name}"
 
-directory "templates/xib/scripts", "#{@project_name}/scripts"
+directory "templates/map/scripts", "#{@project_name}/scripts"
 directory "lua/wax", "#{@project_name}/wax"
 
-directory "templates/xib/WaxApplication.xcodeproj", "#{@project_name}/#{@project_name}.xcodeproj"
+directory "templates/map/WaxApplication.xcodeproj", "#{@project_name}/#{@project_name}.xcodeproj"
 
 fileName = "#{options[:root]}/#{@project_name}/#{@project_name}.xcodeproj/project.pbxproj"
 aFile = File.open(fileName, "r")
@@ -112,13 +112,13 @@ system "mv #{options[:root]}/#{@project_name}/#{@project_name}.xcodeproj/xcuserd
 
 system "mv #{options[:root]}/#{@project_name}/#{@project_name}.xcodeproj/xcuserdata/#{`whoami`.strip}.xcuserdatad/xcschemes/WaxApplication.xcscheme #{options[:root]}/#{@project_name}/#{@project_name}.xcodeproj/xcuserdata/#{`whoami`.strip}.xcuserdatad/xcschemes/#{@project_name}.xcscheme"
 
-template "templates/xib/WaxApplication/main.m.tt", "#{@project_name}/#{@project_name}/main.m"
-template "templates/xib/WaxApplication/ProtocolLoader.h", "#{@project_name}/#{@project_name}/ProtocolLoader.h"
+template "templates/map/WaxApplication/main.m.tt", "#{@project_name}/#{@project_name}/main.m"
+template "templates/map/WaxApplication/ProtocolLoader.h", "#{@project_name}/#{@project_name}/ProtocolLoader.h"
 
-directory "templates/xib/WaxApplication/en.lproj", "#{@project_name}/#{@project_name}/en.lproj"
+directory "templates/map/WaxApplication/en.lproj", "#{@project_name}/#{@project_name}/en.lproj"
 
-template "templates/xib/WaxApplication/WaxApplication-Info.plist.tt", "#{@project_name}/#{@project_name}/#{@project_name}-Info.plist"
-template "templates/xib/WaxApplication/WaxApplication-Prefix.pch.tt", "#{@project_name}/#{@project_name}/#{@project_name}-Prefix.pch"
+template "templates/map/WaxApplication/WaxApplication-Info.plist.tt", "#{@project_name}/#{@project_name}/#{@project_name}-Info.plist"
+template "templates/map/WaxApplication/WaxApplication-Prefix.pch.tt", "#{@project_name}/#{@project_name}/#{@project_name}-Prefix.pch"
 
 copy_file "templates/resources/Default-568h@2x.png", "#{@project_name}/#{@project_name}/Default-568h@2x.png"
 copy_file "templates/resources/Default@2x.png", "#{@project_name}/#{@project_name}/Default@2x.png"

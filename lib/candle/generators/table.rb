@@ -21,7 +21,7 @@ module Candle
   
       init_generator
 
-      desc "Description:\n\n\tcandle will generates an new wax iOS application"
+      desc "Description:\n\n\tcandle will generates a wax blank iOS project using tableview"
 
       argument :name, :desc => "The name of your wax application"
 
