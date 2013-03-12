@@ -32,7 +32,7 @@ module Candle
         @created_on = Date.today.to_s
         puts colorize( "Candle Version: #{Candle::Version::STRING}", { :foreground => :red, :background => :white, :config => :underline } )
         puts
-        puts "Candle is a wax iOS code generators tool."
+        puts "Candle is code generator for wax framework which writes iOS application in lua, it contains xcode 4 template generators"
         puts                    
         puts colorize("Generator Options")
         opt = [{ :category => "generators", :command => "candle blank demo", :description => "generate a blank wax iOS project"},

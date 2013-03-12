@@ -23,7 +23,7 @@ Jeweler::Tasks.new do |gem|
   gem.homepage = "http://github.com/eiffelqiu/candle"
   gem.license = "MIT"
   gem.summary = %Q{Wax iOS Starter Project Generate Tools}
-  gem.description = %Q{Wax iOS Starter Project Generate Tools build with Ruby}
+  gem.description = %Q{Candle is code generator for wax framework which writes iOS application in lua, it contains xcode 4 template generators}
   gem.email = "eiffelqiu@gmail.com"
   gem.authors = ["Eiffel Qiu"]
   gem.executables = ['candle']

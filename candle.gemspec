@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "candle"
-  s.version = "0.0.6"
+  s.version = "0.0.7"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Eiffel Qiu"]
-  s.date = "2013-03-07"
+  s.date = "2013-03-12"
   s.description = "Wax iOS Starter Project Generate Tools build with Ruby"
   s.email = "eiffelqiu@gmail.com"
   s.executables = ["candle"]
@@ -160,6 +160,7 @@ Gem::Specification.new do |s|
     "lib/candle/generators/lua/wax/lib/wax_stdlib.h",
     "lib/candle/generators/lua/wax/lib/wax_struct.h",
     "lib/candle/generators/lua/wax/lib/wax_struct.m",
+    "lib/candle/generators/map.rb",
     "lib/candle/generators/table.rb",
     "lib/candle/generators/templates/blank/WaxApplication.xcodeproj/project.pbxproj",
     "lib/candle/generators/templates/blank/WaxApplication.xcodeproj/project.xcworkspace/contents.xcworkspacedata",
@@ -174,6 +175,22 @@ Gem::Specification.new do |s|
     "lib/candle/generators/templates/blank/scripts/AppDelegate.lua",
     "lib/candle/generators/templates/blank/scripts/tests/init.lua",
     "lib/candle/generators/templates/blank/scripts/tests/someTest.lua",
+    "lib/candle/generators/templates/map/WaxApplication.xcodeproj/project.pbxproj",
+    "lib/candle/generators/templates/map/WaxApplication.xcodeproj/project.xcworkspace/contents.xcworkspacedata",
+    "lib/candle/generators/templates/map/WaxApplication.xcodeproj/project.xcworkspace/xcuserdata/eiffel.xcuserdatad/UserInterfaceState.xcuserstate",
+    "lib/candle/generators/templates/map/WaxApplication.xcodeproj/xcuserdata/eiffel.xcuserdatad/xcschemes/WaxApplication.xcscheme",
+    "lib/candle/generators/templates/map/WaxApplication.xcodeproj/xcuserdata/eiffel.xcuserdatad/xcschemes/xcschememanagement.plist",
+    "lib/candle/generators/templates/map/WaxApplication/ProtocolLoader.h",
+    "lib/candle/generators/templates/map/WaxApplication/Rakefile",
+    "lib/candle/generators/templates/map/WaxApplication/WaxApplication-Info.plist.tt",
+    "lib/candle/generators/templates/map/WaxApplication/WaxApplication-Prefix.pch.tt",
+    "lib/candle/generators/templates/map/WaxApplication/en.lproj/InfoPlist.strings",
+    "lib/candle/generators/templates/map/WaxApplication/main.m.tt",
+    "lib/candle/generators/templates/map/scripts/AppDelegate.lua",
+    "lib/candle/generators/templates/map/scripts/SimpleAnnotation.lua",
+    "lib/candle/generators/templates/map/scripts/SimpleMapController.lua",
+    "lib/candle/generators/templates/map/scripts/tests/init.lua",
+    "lib/candle/generators/templates/map/scripts/tests/someTest.lua",
     "lib/candle/generators/templates/project.rake",
     "lib/candle/generators/templates/resources/Default-568h@2x.png",
     "lib/candle/generators/templates/resources/Default.png",
